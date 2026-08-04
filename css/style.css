@@ -274,7 +274,7 @@ h1,h2,h3,h4,h5{
     width:max-content;
     gap:25px;
 
-    animation:partnersScroll 30s linear infinite;
+    animation:partnersScroll 10s linear infinite;
 }
 
 .partners-track:hover{
