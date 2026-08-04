@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Serviços | Hacker Investigativo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="bg-glow bg-1"></div>
+    <div class="bg-glow bg-2"></div>
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+
+        <a href="index.html" class="btn-secondary">
+            Voltar ao Início
+        </a>
+
+    </header>
+
+    <section class="hero" style="min-height:60vh;">
+
+        <div class="hero-left">
+
+            <span class="badge">
+                Inteligência Digital
+            </span>
+
+            <h1>
+                Todos os
+                <span>Serviços</span>
+            </h1>
+
+            <p>
+                Conheça nossas soluções em Inteligência Digital,
+                Segurança da Informação e Investigações Corporativas.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="services-page">
+
+        <div class="section-title">
+
+            <h2>Buscar Serviço</h2>
+
+        </div>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Digite o nome do serviço..."
+            >
+
+        </div>
+
+        <!-- Categoria 1 -->
+
+        <div class="category">
+
+            <h2>Inteligência Digital</h2>
+
+            <div class="services-grid">
+
+                <div class="service-card searchable">
+                    <h3>OSINT</h3>
+                    <p>Coleta e análise de informações em fontes abertas.</p>
+                </div>
+
+                <div class="service-card searchable">
+                    <h3>Cloud URL</h3>
+                    <p>Monitoramento de exposições públicas e riscos digitais.</p>
+                </div>
+
+                <div class="service-card searchable">
+                    <h3>Cloud Usuário</h3>
+                    <p>Análise de exposição digital em ambientes públicos.</p>
+                </div>
+
+                <div class="service-card searchable">
+                    <h3>Inteligência Estratégica</h3>
+                    <p>Transformação de dados em informação útil.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Categoria 2 -->
+
+        <div class="category">
+
+            <h2>Segurança da Informação</h2>
+
+            <div class="services-grid">
+
+                <div class="service-card searchable">
+                    <h3>Pentest</h3>
+                    <p>Identificação de vulnerabilidades e riscos.</p>
+                </div>
+
+                <div class="service-card searchable">
+                    <h3>Análise de Risco</h3>
+                    <p>Avaliação preventiva de ameaças.</p>
+                </div>
+
+                <div class="service-card searchable">
+                    <h3>Proteção de Dados</h3>
+                    <p>Estratégias para proteção de ativos digitais.</p>
+                </div>
+
+                <div class="service-card searchable">
+                    <h3>Due Diligence</h3>
+                    <p>Validação e análise de informações corporativas.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Categoria 3 -->
+
+        <div class="category">
+
+            <h2>Investigação Corporativa</h2>
+
+            <div class="services-grid">
+
+                <div class="service-card searchable">
+                    <h3>Investigação Empresarial</h3>
+                    <p>Levantamento estratégico de informações corporativas.</p>
+                </div>
+
+                <div class="service-card searchable">
+                    <h3>Análise de Mercado</h3>
+                    <p>Pesquisa e monitoramento competitivo.</p>
+                </div>
+
+                <div class="service-card searchable">
+                    <h3>Monitoramento Digital</h3>
+                    <p>Acompanhamento de riscos e exposição online.</p>
+                </div>
+
+                <div class="service-card searchable">
+                    <h3>Consultoria Especializada</h3>
+                    <p>Suporte técnico para tomada de decisão.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", () => {
+
+            const value =
+                searchInput.value.toLowerCase();
+
+            const cards =
+                document.querySelectorAll(".searchable");
+
+            cards.forEach(card => {
+
+                const text =
+                    card.innerText.toLowerCase();
+
+                card.style.display =
+                    text.includes(value)
+                    ? "block"
+                    : "none";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

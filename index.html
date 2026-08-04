@@ -1,0 +1,376 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Investigativo | Inteligência Digital</title>
+
+    <meta name="description" content="Especialistas em Inteligência Digital, Segurança da Informação e Investigações Corporativas.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-glow bg-1"></div>
+    <div class="bg-glow bg-2"></div>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <img src="assets/logo.png" alt="Hacker Investigativo">
+        </div>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰ Menu
+        </button>
+
+    </header>
+
+    <!-- Modal Menu -->
+    <div class="menu-modal" id="menuModal">
+
+        <div class="menu-content">
+
+            <button id="closeMenu" class="close-btn">✕</button>
+
+            <nav>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#contato">Contato</a>
+                <a href="#">Instagram</a>
+            </nav>
+
+            <a href="#servicos" class="btn-primary">
+                Saber Mais
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <span class="badge">
+                Especialistas em Inteligência Digital
+            </span>
+
+            <h1>
+                Sua Segurança é
+                <span>Nossa Missão</span>
+            </h1>
+
+            <p>
+                Atuamos com Inteligência Digital e Investigações Corporativas —
+                entregando resultados sigilosos, ágeis e tecnicamente irrepreensíveis.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contato" class="btn-primary">
+                    Solicitar Consulta
+                </a>
+
+                <a href="#servicos" class="btn-secondary">
+                    Ver Serviços
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="shield-container">
+
+                <div class="shield-ring ring-1"></div>
+                <div class="shield-ring ring-2"></div>
+
+                <div class="shield-center">
+
+                    <svg width="90" height="90" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L19 5V11C19 16 15.5 20 12 22C8.5 20 5 16 5 11V5L12 2Z"
+                            stroke="#F551AC"
+                            stroke-width="2"/>
+                    </svg>
+
+                </div>
+
+                <div class="floating-tag top-left">
+                    Confiança
+                </div>
+
+                <div class="floating-tag top-right">
+                    Proteção de Dados
+                </div>
+
+                <div class="floating-tag bottom-left">
+                    Confidencial 100%
+                </div>
+
+                <div class="floating-tag bottom-right">
+                    Resposta Ágil
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="partners">
+
+        <div class="section-title">
+
+            <h2>Ecossistema de Tecnologia e Segurança</h2>
+
+            <p>
+                Tecnologias, metodologias e referências utilizadas em nossos processos.
+            </p>
+
+        </div>
+
+        <div class="partners-carousel">
+
+            <div class="partners-track">
+
+                <!-- Primeira sequência -->
+
+                <div class="partner-card">
+                    <img src="assets/partners/owasp.png" alt="OWASP">
+                </div>
+
+                <div class="partner-card">
+                    <img src="assets/partners/lgpd.png" alt="LGPD">
+                </div>
+
+                <div class="partner-card">
+                    <img src="assets/partners/iso27001.png" alt="ISO 27001">
+                </div>
+
+                <div class="partner-card">
+                    <img src="assets/partners/kali.png" alt="Kali Linux">
+                </div>
+
+                <div class="partner-card">
+                    <img src="assets/partners/nmap.png" alt="Nmap">
+                </div>
+
+                <!-- Duplicação para loop infinito -->
+
+                <div class="partner-card">
+                    <img src="assets/partners/owasp.png" alt="OWASP">
+                </div>
+
+                <div class="partner-card">
+                    <img src="assets/partners/lgpd.png" alt="LGPD">
+                </div>
+
+                <div class="partner-card">
+                    <img src="assets/partners/iso27001.png" alt="ISO 27001">
+                </div>
+
+                <div class="partner-card">
+                    <img src="assets/partners/kali.png" alt="Kali Linux">
+                </div>
+
+                <div class="partner-card">
+                    <img src="assets/partners/nmap.png" alt="Nmap">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Serviços -->
+    <section class="services" id="servicos">
+
+        <div class="section-title">
+
+            <h2>Nossos Serviços</h2>
+
+            <p>
+                Soluções voltadas para inteligência digital,
+                investigação corporativa e análise estratégica.
+            </p>
+
+        </div>
+
+        <div class="carousel-container">
+
+            <button class="carousel-btn prev">❮</button>
+
+            <div class="carousel-track" id="carouselTrack">
+
+                <div class="service-card">
+                    <h3>CPF PRO</h3>
+                    <p>Dados completos e atualizados de CPFs.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Renavam</h3>
+                    <p>Registro de veículos e informações relacionadas.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Hist. Chave Pix</h3>
+                    <p>Histórico de transações e informações relacionadas.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Decifrando Pix</h3>
+                    <p>Encontrar informações sobre transações pix.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Placa Veicular</h3>
+                    <p>Encontrar informações sobre veículos por placa.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>EMPREGO CPF/CNPJ</h3>
+                    <p>Histórico de empregos, sociedades e informações relacionadas.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Telefone</h3>
+                    <p>Informações sobre números de telefone.</p>
+                </div>
+
+            </div>
+
+            <button class="carousel-btn next">❯</button>
+
+        </div>
+
+        <div class="center">
+
+            <a href="consultas.html"
+               target="_blank"
+               class="btn-primary">
+
+                Ver Todos os Serviços
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="about">
+
+        <div class="section-title">
+            <h2>Sobre Nós</h2>
+        </div>
+
+        <p>
+            A Hacker Investigativo atua com Inteligência Digital,
+            Segurança da Informação e Investigação Corporativa,
+            oferecendo soluções estratégicas para empresas e profissionais.
+        </p>
+
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="differentials">
+
+        <div class="section-title">
+            <h2>Nosso Diferencial</h2>
+        </div>
+
+        <div class="diff-grid">
+
+            <div class="diff-card">Atendimento Sigiloso</div>
+            <div class="diff-card">Resposta Ágil</div>
+            <div class="diff-card">Equipe Especializada</div>
+            <div class="diff-card">Segurança da Informação</div>
+            <div class="diff-card">Cobertura Nacional</div>
+            <div class="diff-card">Suporte Humanizado</div>
+
+        </div>
+
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+
+        <div class="section-title">
+            <h2>Perguntas Frequentes</h2>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Como funciona o atendimento?
+            </button>
+
+            <div class="faq-answer">
+                Nossa equipe realiza uma análise inicial e direciona a melhor solução para sua necessidade.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Os serviços são sigilosos?
+            </button>
+
+            <div class="faq-answer">
+                Sim. Todo atendimento segue rígidos protocolos de confidencialidade.
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contact">
+
+        <h2>Fale com Nossa Equipe</h2>
+
+        <p>
+            Entre em contato e descubra como podemos ajudar.
+        </p>
+
+        <div class="contact-buttons">
+
+            <a href="#" class="btn-primary">
+                Fale Conosco
+            </a>
+
+            <a href="#" class="btn-secondary">
+                Enviar E-mail
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+
+        <h3>
+            Sua Segurança é Nossa Missão
+        </h3>
+
+        <p>
+            Inteligência Digital • Segurança da Informação • Investigações Corporativas
+        </p>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
