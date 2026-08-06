@@ -135,6 +135,7 @@
     .header{
 
         padding:15px;
+        height:60px;
 
     }
 
@@ -1232,4 +1233,237 @@
         justify-content:space-evenly;
 
     }
+}
+
+/* ===================================================
+   SERVICES PAGE
+   DESKTOP
+=================================================== */
+
+@media (min-width:1200px){
+
+    .services-page{
+
+        max-width:1400px;
+
+        margin:auto;
+
+        padding:100px 40px;
+
+    }
+
+    .services-grid{
+
+        display:grid;
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:22px;
+
+    }
+
+    .service-card{
+
+        padding:22px;
+
+        min-height:160px;
+
+    }
+
+}
+
+/* ===================================================
+   SERVICES PAGE
+   NOTEBOOK
+=================================================== */
+
+@media (max-width:1199px){
+
+    .services-page{
+
+        padding:90px 32px;
+
+    }
+
+    .services-grid{
+
+        display:grid;
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:18px;
+
+    }
+
+    .service-card{
+
+        padding:18px;
+
+        min-height:150px;
+
+    }
+
+    .service-card h3{
+
+        font-size:1rem;
+
+    }
+
+    .service-card p{
+
+        font-size:.9rem;
+
+    }
+
+}
+
+/* ===================================================
+   SERVICES PAGE
+   TABLET
+=================================================== */
+
+@media (max-width:992px){
+
+    .services-page{
+
+        padding:80px 24px;
+
+    }
+
+    .services-grid{
+
+        display:grid;
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:16px;
+
+    }
+
+    .service-card{
+
+        padding:16px;
+
+        min-height:145px;
+
+    }
+
+    .service-card h3{
+
+        font-size:.95rem;
+
+    }
+
+    .service-card p{
+
+        font-size:.84rem;
+
+        line-height:1.45;
+
+    }
+
+}
+
+/* ===================================================
+   SERVICES PAGE
+   MOBILE
+=================================================== */
+
+@media (max-width:768px){
+
+    .services-page{
+
+        padding:70px 18px;
+
+    }
+
+    .services-grid{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:12px;
+
+    }
+
+    .service-card{
+
+        padding:14px;
+
+        min-height:125px;
+
+        border-radius:14px;
+
+    }
+
+    .service-card h3{
+
+        font-size:.88rem;
+
+        margin-bottom:8px;
+
+        line-height:1.2;
+
+    }
+
+    .service-card p{
+
+        font-size:.76rem;
+
+        line-height:1.35;
+
+    }
+
+}
+
+/* ===================================================
+   SERVICES PAGE
+   MOBILE PEQUENO
+=================================================== */
+
+@media (max-width:480px){
+
+    .services-page{
+
+        padding:60px 14px;
+
+    }
+
+    .services-grid{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+    .service-card{
+
+        padding:12px;
+
+        min-height:115px;
+
+        border-radius:12px;
+
+    }
+
+    .service-card h3{
+
+        font-size:.80rem;
+
+        margin-bottom:6px;
+
+    }
+
+    .service-card p{
+
+        font-size:.70rem;
+
+        line-height:1.3;
+
+    }
+
 }
