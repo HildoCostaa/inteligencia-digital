@@ -284,8 +284,6 @@ h1,h2,h3,h4,h5{
 
     background:rgba(255,255,255,.03);
 
-    border:1px solid rgba(245,81,172,.12);
-
     display:flex;
 
     align-items:center;
