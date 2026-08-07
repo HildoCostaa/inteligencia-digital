@@ -288,6 +288,25 @@ function createParticle() {
 
 }
 
+/* ===================================================
+   HEADER — SCROLL
+=================================================== */
+
+const mainHeader = document.getElementById("mainHeader");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 40) {
+
+        mainHeader.classList.add("scrolled");
+
+    } else {
+
+        mainHeader.classList.remove("scrolled");
+
+    }
+
+});
 
 
 setInterval(createParticle, 600);
