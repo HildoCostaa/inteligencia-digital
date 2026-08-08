@@ -308,5 +308,125 @@ window.addEventListener("scroll", () => {
 
 });
 
+/* =====================================================
+   SECURITY SCANNER
+===================================================== */
+
+const securityScanner =
+    document.getElementById("securityScanner");
+
+
+let scannerRunning = false;
+let scannerPlayedOnEntry = false;
+let scannerPlayedAtBottom = false;
+
+
+/* =====================================================
+   EXECUTAR SCANNER
+===================================================== */
+
+function runSecurityScanner() {
+
+    if (!securityScanner || scannerRunning) {
+        return;
+    }
+
+    scannerRunning = true;
+
+    securityScanner.classList.remove("active");
+
+    /*
+        Força o navegador a recalcular
+        a animação antes de iniciar novamente.
+    */
+
+    void securityScanner.offsetWidth;
+
+    securityScanner.classList.add("active");
+
+
+    setTimeout(() => {
+
+        securityScanner.classList.remove("active");
+
+        scannerRunning = false;
+
+    }, 1800);
+
+}
+
+
+/* =====================================================
+   SCANNER AO ENTRAR NO SITE
+===================================================== */
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        if (!scannerPlayedOnEntry) {
+
+            runSecurityScanner();
+
+            scannerPlayedOnEntry = true;
+
+        }
+
+    }, 500);
+
+});
+
+
+/* =====================================================
+   DETECTAR FINAL DA PÁGINA
+===================================================== */
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop =
+        window.scrollY;
+
+    const windowHeight =
+        window.innerHeight;
+
+    const documentHeight =
+        document.documentElement.scrollHeight;
+
+
+    const distanceFromBottom =
+        documentHeight -
+        (scrollTop + windowHeight);
+
+
+    /*
+        Consideramos que o usuário
+        chegou ao final quando faltarem
+        80px ou menos.
+    */
+
+    if (distanceFromBottom <= 80) {
+
+        if (!scannerPlayedAtBottom) {
+
+            runSecurityScanner();
+
+            scannerPlayedAtBottom = true;
+
+        }
+
+    } else {
+
+        /*
+            Permite que o scanner seja
+            executado novamente quando
+            o usuário sair do final e
+            retornar.
+        */
+
+        scannerPlayedAtBottom = false;
+
+    }
+
+});
 
 setInterval(createParticle, 600);

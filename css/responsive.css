@@ -1614,3 +1614,43 @@
     }
 
 }
+
+/* =====================================================
+   SECURITY SCANNER — MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .scanner-label {
+
+        right: 14px;
+
+    }
+
+    .scanner-status {
+
+        font-size: 8px;
+
+    }
+
+    .scanner-status-text {
+
+        font-size: 6px;
+
+        letter-spacing: 1.3px;
+
+    }
+
+    .scanner-line {
+
+        height: 1.5px;
+
+    }
+
+    .scanner-glow {
+
+        height: 70px;
+
+    }
+
+}

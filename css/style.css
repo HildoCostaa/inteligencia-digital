@@ -1692,3 +1692,333 @@ h1,h2,h3,h4,h5{
     }
 
 }
+
+/* =====================================================
+   SECURITY SCANNER
+===================================================== */
+
+.security-scanner {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    pointer-events: none;
+
+    z-index: 100000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   ESTADO ATIVO
+===================================================== */
+
+.security-scanner.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* =====================================================
+   LINHA PRINCIPAL
+===================================================== */
+
+.scanner-line {
+
+    position: absolute;
+
+    left: 0;
+
+    top: -10px;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: #F551AC;
+
+    box-shadow:
+
+        0 0 6px #F551AC,
+
+        0 0 18px rgba(245,81,172,.9),
+
+        0 0 45px rgba(245,81,172,.6);
+
+    transform: translateY(-10px);
+
+}
+
+
+/* =====================================================
+   ÁREA DE BRILHO
+===================================================== */
+
+.scanner-glow {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 100px;
+
+    transform: translateY(100%);
+
+    background:
+
+        linear-gradient(
+            to top,
+            rgba(245,81,172,.22),
+            rgba(245,81,172,.08),
+            transparent
+        );
+
+    filter: blur(5px);
+
+}
+
+
+/* =====================================================
+   ANIMAÇÃO
+===================================================== */
+
+.security-scanner.active .scanner-line {
+
+    animation:
+
+        scannerMove 1.7s
+        cubic-bezier(.65,0,.35,1)
+        forwards;
+
+}
+
+
+.security-scanner.active .scanner-glow {
+
+    animation:
+
+        scannerGlow 1.7s
+        cubic-bezier(.65,0,.35,1)
+        forwards;
+
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.scanner-label {
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 4px;
+
+    transform: translateY(-50%);
+
+    opacity: 0;
+
+    font-family: "Open Sans", sans-serif;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.security-scanner.active .scanner-label {
+
+    animation:
+
+        scannerLabel
+        1.7s
+        ease
+        forwards;
+
+}
+
+
+.scanner-status {
+
+    font-family: "Roboto", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #F551AC;
+
+}
+
+
+.scanner-status-text {
+
+    font-size: 8px;
+
+    color: rgba(255,255,255,.65);
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =====================================================
+   PEQUENO RUÍDO VISUAL
+===================================================== */
+
+.scanner-noise {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(245,81,172,.015) 50%,
+            transparent 100%
+        );
+
+    opacity: 0;
+
+}
+
+
+.security-scanner.active .scanner-noise {
+
+    animation:
+
+        scannerNoise
+        1.7s
+        ease
+        forwards;
+
+}
+
+
+/* =====================================================
+   KEYFRAMES
+===================================================== */
+
+@keyframes scannerMove {
+
+    0% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(100vh);
+
+    }
+
+}
+
+
+@keyframes scannerGlow {
+
+    0% {
+
+        transform: translateY(100%);
+
+        opacity: .8;
+
+    }
+
+    100% {
+
+        transform: translateY(calc(100vh + 100%));
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes scannerLabel {
+
+    0% {
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+    65% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes scannerNoise {
+
+    0% {
+
+        opacity: 0;
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+    60% {
+
+        opacity: .4;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+    }
+
+}
