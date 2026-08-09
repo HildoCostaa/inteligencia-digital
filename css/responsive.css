@@ -1654,3 +1654,213 @@
     }
 
 }
+
+/* ===================================================
+   CERTIFICAÇÕES — RESPONSIVIDADE
+=================================================== */
+
+
+/* ==========================================
+   DESKTOP GRANDE
+   1200px+
+========================================== */
+
+@media (min-width: 1200px) {
+
+    .certificates-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 28px;
+
+    }
+
+}
+
+
+/* ==========================================
+   NOTEBOOK / DESKTOP
+   769px — 1199px
+========================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    .certificates-grid {
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 18px;
+
+    }
+
+    .certificate-info {
+
+        padding: 18px;
+
+    }
+
+    .certificate-info h3 {
+
+        font-size: .95rem;
+
+    }
+
+    .certificate-info p {
+
+        font-size: .82rem;
+
+    }
+
+}
+
+
+/* ==========================================
+   TABLET
+   600px — 768px
+========================================== */
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+    .certificates-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+
+    }
+
+    .certificate-info {
+
+        padding: 17px;
+
+    }
+
+    .certificate-info h3 {
+
+        font-size: .95rem;
+
+    }
+
+    .certificate-info p {
+
+        font-size: .82rem;
+
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR
+   0px — 599px
+========================================== */
+
+@media (max-width: 599px) {
+
+    .certificates-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        margin-top: 25px;
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .certificate-card {
+
+        border-radius: 12px;
+
+    }
+
+
+    .certificate-image {
+
+        aspect-ratio: 4 / 3;
+
+    }
+
+
+    .certificate-image img {
+
+        padding: 7px;
+
+    }
+
+
+    .certificate-info {
+
+        padding: 12px;
+
+    }
+
+
+    .certificate-info h3 {
+
+        font-size: .78rem;
+
+        line-height: 1.3;
+
+        margin-bottom: 6px;
+
+    }
+
+
+    .certificate-info p {
+
+        font-size: .68rem;
+
+        line-height: 1.45;
+
+    }
+
+
+    /* Evita movimentos exagerados no celular */
+
+    .certificate-card:hover {
+
+        transform: none;
+
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR MUITO PEQUENO
+   até 380px
+========================================== */
+
+@media (max-width: 380px) {
+
+    .certificates-grid {
+
+        gap: 8px;
+
+    }
+
+
+    .certificate-info {
+
+        padding: 10px;
+
+    }
+
+
+    .certificate-info h3 {
+
+        font-size: .72rem;
+
+    }
+
+
+    .certificate-info p {
+
+        font-size: .63rem;
+
+    }
+
+}
