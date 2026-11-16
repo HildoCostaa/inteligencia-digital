@@ -407,27 +407,62 @@ h1,h2,h3,h4,h5{
     flex:1;
 }
 
-.badge{
+/* .badge{
     display:inline-block;
     border:1px solid rgba(245,81,172,.4);
     color:#F551AC;
     padding:10px 20px;
     border-radius:50px;
     margin-bottom:25px;
+} */
+/* ========================================
+   TEXTO DINÂMICO — HERO
+======================================== */
+
+.dynamic-heading {
+    margin-bottom: 20px;
 }
 
+.dynamic-heading h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+
+.dynamic-heading span {
+    display: block;
+    color: #F551AC;
+    margin-top: 8px;
+    transition: opacity .4s ease, transform .4s ease;
+}
+
+.dynamic-heading span.changing {
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .dynamic-heading h2 {
+        font-size: 2rem;
+    }
+
+}
 .badge a{
     color:#F551AC;
     text-decoration:none;
 }
 
-.hero h1{
-    font-size:5rem;
-    line-height:1.1;
-    margin-bottom:30px;
+.header h1{
+    
 }
 
-.hero h1 span{
+.header h1 span{
     color:#F551AC;
 }
 

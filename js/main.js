@@ -429,4 +429,44 @@ window.addEventListener("scroll", () => {
 
 });
 
+/* ========================================
+   TEXTO DINÂMICO — SOMOS UMA EMPRESA
+======================================== */
+
+const dynamicWord = document.getElementById("dynamicWord");
+
+const companyWords = [
+    
+    "CPF",
+    "CNPJ",
+    "ENDEREÇOS",
+    "TELEFONES",
+    "E-MAILS",
+    "PLACAS DE VEÍCULOS"
+];
+
+let currentWord = 0;
+
+setInterval(() => {
+
+    if (!dynamicWord) return;
+
+    dynamicWord.classList.add("changing");
+
+    setTimeout(() => {
+
+        currentWord++;
+
+        if (currentWord >= companyWords.length) {
+            currentWord = 0;
+        }
+
+        dynamicWord.textContent = companyWords[currentWord];
+
+        dynamicWord.classList.remove("changing");
+
+    }, 400);
+
+}, 3000);
+
 setInterval(createParticle, 600);
